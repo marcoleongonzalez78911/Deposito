@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import views.ViewCliente;
+import net.proteanit.sql.DbUtils;
 
 
 /**
@@ -23,6 +25,7 @@ public class ModelCliente {
     private ResultSet rs;
     private PreparedStatement ps;
     private String sql;
+    ViewCliente viewcli;
     
     private  String clave_cliente;
     private String nombre;
@@ -68,6 +71,7 @@ public class ModelCliente {
         conexion = DriverManager.getConnection("jdbc:mysql://localhost/depost","root","marko");
         st = conexion.createStatement();
         SeleccionarTodo();
+            
         
     } catch(SQLException ex){
         JOptionPane.showMessageDialog(null,"Error 101");
@@ -81,6 +85,7 @@ public class ModelCliente {
         setApellido_paterno(rs.getString("apellido_paterno"));
         setApellido_materno(rs.getString("apellido_materno"));
         setTelefono(rs.getString("telefono"));
+        
     } catch(SQLException ex){
         JOptionPane.showMessageDialog(null,"Error 102");
     }
@@ -192,22 +197,20 @@ public class ModelCliente {
         JOptionPane.showMessageDialog(null,"Error 110");
     }
     }//fin de actualizar
-    public void buscar(){
-    try{
-     rs = st.executeQuery("select * from clientes where nombre like '%");
-     ps = conexion.prepareStatement(sql);
-        ps.setString(1, getClave_cliente());
-        ps.setString(2,getNombre());
-        ps.setString(3,getApellido_paterno());
-        ps.setString(4,getApellido_materno());
-        ps.setString(5,getTelefono());
-        ps.executeUpdate();
-        Conectar();
-        moverPrimero();
-    }catch (SQLException ex){
-        JOptionPane.showMessageDialog(null,"Error 100");
-    }
     
-    } 
+       public void buscar(){
+        try{
+         
+            rs = st.executeQuery("select * from clientes where nombre like '%"+this.viewcli.jtf_buscar.getText()+"%'");
+            viewcli.jt_cliente.setModel(DbUtils.resultSetToTableModel(rs));
+            
+            rs=st.executeQuery("Select * from clientes"); 
+        
+        } catch (SQLException err){
+             
+             JOptionPane.showMessageDialog(null,"Error "+err.getMessage());
+         }
+    
+    }
     
 }///Fin de la class

@@ -6,6 +6,7 @@
 package controllers;
 import models.ModelCliente;
 import views.ViewCliente;
+
 /**
  *
  * @author mark
@@ -26,6 +27,7 @@ public ControllerCliente(ModelCliente modelcli, ViewCliente viewcli){
     this.viewcli.jbtn_nuevo.addActionListener(e -> jbtn_nuevo_click());
     this.viewcli.jbtn_agregar.addActionListener(e -> jbtn_agregar_click());
     this.viewcli.jbtn_eliminar.addActionListener(e -> jbtn_borrar_click());
+    this.viewcli.jtf_buscar.addActionListener(e -> jtf_buscar_KeyReleased());
 
  initView();
 }
@@ -102,6 +104,12 @@ public void initView(){
 modelcli.Conectar();
 viewcli.setVisible(true);
 modelcli.moverPrimero();
+getValores();
+}
+
+public void jtf_buscar_KeyReleased(){
+setValores();
+modelcli.buscar();
 getValores();
 }
     
