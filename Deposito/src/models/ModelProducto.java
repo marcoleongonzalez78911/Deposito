@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 public class ModelProducto {
     private Connection conexion;
     private Statement st;
-    private ResultSet rs;
+    public ResultSet rs;
     private PreparedStatement ps;
     private String sql;
     

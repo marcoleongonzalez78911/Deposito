@@ -4,11 +4,21 @@
  * and open the template in the editor.
  */
 package controllers;
-
+import models.ModelVentas;
+import views.ViewVentas;
 /**
  *
  * @author mark
  */
 public class ControllerVentas {
+    ModelVentas modelvent;
+    ViewVentas viewvent;
     
-}
+public ControllerVentas(ModelVentas modelvent, ViewVentas viewvent){
+    this.modelvent = modelvent;
+    this.viewvent = viewvent;
+    
+
+}//fin del constructor //
+    
+}//fin de la class

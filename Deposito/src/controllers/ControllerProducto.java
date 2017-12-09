@@ -6,6 +6,7 @@
 package controllers;
 import views.ViewProducto;
 import models.ModelProducto;
+import net.proteanit.sql.DbUtils;
 /**
  *
  * @author mark
@@ -63,6 +64,7 @@ viewprodu.jtf_paquete24.setText("");
 public void jbtn_agregar_click(){
 setValores();
 modelprodu.Insertar();
+tabla();
 getValores();
 
 }//boton agragar
@@ -86,6 +88,7 @@ getValores();
 public void jbtn_borrar_click(){
 setValores();
 modelprodu.borrar();
+tabla();
 getValores();
 
 }//boton modificar
@@ -104,8 +107,14 @@ getValores();
 
 }//boton anterior
 
+ public void tabla(){
+viewprodu.jt_productos.setModel(DbUtils.resultSetToTableModel(modelprodu.rs));
+}//tabla
+
+
 public void initView(){
 modelprodu.Conectar();
+tabla();
 viewprodu.setVisible(true);
 modelprodu.moverPrimero();
 getValores();

@@ -34,15 +34,20 @@ public class Main {
          ViewLogin   viewlong = new ViewLogin();
          ControllerLogin controllerlong = new ControllerLogin(modellong, viewlong);
          
+         ModelVentas modelvent = new ModelVentas();
+         ViewVentas   viewvent = new ViewVentas();
+         ControllerVentas controllervent = new ControllerVentas(modelvent, viewvent);
+         
          ModelDeposito modeldepo = new ModelDeposito();
          ViewDeposito viewdepo = new  ViewDeposito();
-         Object views[] = new Object[6];
+         Object views[] = new Object[7];
          views[0] = viewcli;
          views[1] = viewuser;
          views[2] = viewprodu;
          views[3] = viewprove;
          views[4] = viewlong;
-         views[5] = viewdepo;
+         views[5] = viewvent;
+         views[6] = viewdepo;
          ControllerDeposito controllerdepo = new ControllerDeposito(modeldepo, views);
     }
     

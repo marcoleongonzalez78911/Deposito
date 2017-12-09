@@ -46,43 +46,63 @@ public class ViewProducto extends javax.swing.JPanel {
         jtf_paquete24 = new javax.swing.JTextField();
         jl_buscar = new javax.swing.JLabel();
         jtf_buscar = new javax.swing.JTextField();
-        jbtn_primero = new javax.swing.JButton();
-        jbtn_ultimo = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         jbtn_anterior = new javax.swing.JButton();
-        jbtn_siguiente = new javax.swing.JButton();
         jbtn_nuevo = new javax.swing.JButton();
         jbtn_actualizar = new javax.swing.JButton();
+        jbtn_siguiente = new javax.swing.JButton();
         jbtn_eliminar = new javax.swing.JButton();
         jbtn_agregar = new javax.swing.JButton();
-        jl_fondo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
+        jSeparator10 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_clave.setText("Clave de producto");
-        add(jl_clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 97, -1, -1));
+        add(jl_clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         jl_producto.setText("Producto");
-        add(jl_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 136, -1, -1));
+        add(jl_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, 20));
 
         jl_contenido.setText("Contenido");
-        add(jl_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 177, -1, -1));
+        add(jl_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, -1, -1));
 
         jl_existencias.setText("Existencias");
-        add(jl_existencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 217, -1, -1));
+        add(jl_existencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         jl_clave_proveedor.setText("Clave de Proveedor");
-        add(jl_clave_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 258, -1, -1));
+        add(jl_clave_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, -1, -1));
 
         jl_precio_pz.setText("Precio por pz");
-        add(jl_precio_pz, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 298, -1, -1));
+        add(jl_precio_pz, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
 
         jl_paquete24.setText("Precio por paquete24");
-        add(jl_paquete24, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 336, -1, -1));
+        add(jl_paquete24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
 
         jl_titulo.setFont(new java.awt.Font("PMingLiU-ExtB", 2, 14)); // NOI18N
         jl_titulo.setText("Registro de Productos ");
         add(jl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 11, 146, -1));
 
+        jt_productos.setBackground(new java.awt.Color(0, 102, 102));
         jt_productos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -96,50 +116,131 @@ public class ViewProducto extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jt_productos);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 680, 90));
-        add(jtf_clave_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 94, 40, -1));
-        add(jtf_tipo_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 133, 93, -1));
-        add(jtf_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 174, 93, -1));
-        add(jtf_existencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 214, 93, -1));
-        add(jtf_clave_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 255, 93, -1));
-        add(jtf_precio_pz, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 295, 93, -1));
-        add(jtf_paquete24, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 333, 93, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 680, 180));
+
+        jtf_clave_producto.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_clave_producto.setBorder(null);
+        add(jtf_clave_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 90, -1));
+
+        jtf_tipo_producto.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_tipo_producto.setBorder(null);
+        add(jtf_tipo_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 110, -1));
+
+        jtf_contenido.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_contenido.setBorder(null);
+        add(jtf_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 130, -1));
+
+        jtf_existencias.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_existencias.setBorder(null);
+        add(jtf_existencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 100, -1));
+
+        jtf_clave_proveedor.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_clave_proveedor.setBorder(null);
+        add(jtf_clave_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 100, -1));
+
+        jtf_precio_pz.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_precio_pz.setBorder(null);
+        add(jtf_precio_pz, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 110, -1));
+
+        jtf_paquete24.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_paquete24.setBorder(null);
+        add(jtf_paquete24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 120, -1));
 
         jl_buscar.setText("Buscar");
-        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 376, -1, -1));
-        add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 373, 172, -1));
+        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
-        jbtn_primero.setText("<<<");
-        add(jbtn_primero, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 132, -1, -1));
+        jtf_buscar.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_buscar.setBorder(null);
+        add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 180, -1));
 
-        jbtn_ultimo.setText(">>>");
-        add(jbtn_ultimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(513, 132, -1, -1));
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         jbtn_anterior.setText("Anterior");
-        add(jbtn_anterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 173, -1, -1));
-
-        jbtn_siguiente.setText("Siguiente");
-        add(jbtn_siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 173, -1, -1));
+        jPanel2.add(jbtn_anterior);
 
         jbtn_nuevo.setText("Nuevo");
-        add(jbtn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 213, -1, -1));
+        jPanel2.add(jbtn_nuevo);
 
         jbtn_actualizar.setText("Actualizar");
-        add(jbtn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 213, -1, -1));
+        jPanel2.add(jbtn_actualizar);
+
+        jbtn_siguiente.setText("Siguiente");
+        jPanel2.add(jbtn_siguiente);
 
         jbtn_eliminar.setText("Eliminar");
-        add(jbtn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 254, -1, -1));
+        jPanel2.add(jbtn_eliminar);
 
         jbtn_agregar.setText("Agregar");
-        add(jbtn_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(499, 254, 81, -1));
+        jPanel2.add(jbtn_agregar);
 
-        jl_fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\logopepsi.jpg")); // NOI18N
-        add(jl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 680, 490));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+        jPanel2.add(jLabel1);
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 260, 360));
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+        jPanel1.add(jLabel2);
+
+        jbtn_primero.setText("<<<");
+        jPanel1.add(jbtn_primero);
+
+        jbtn_ultimo.setText(">>>");
+        jPanel1.add(jbtn_ultimo);
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 250, 250));
+
+        jButton1.setText("Buscar");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 112, 90, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 110, -1));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 130, -1));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 100, -1));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 100, -1));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 110, -1));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 120, -1));
+        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 180, -1));
+
+        jLabel3.setText("Precio Compra Pieza");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, -1, -1));
+
+        jLabel4.setText("Precio Compra Paquete de 24");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, -1, -1));
+
+        jTextField1.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField1.setBorder(null);
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 100, -1));
+
+        jTextField2.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField2.setBorder(null);
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 150, -1));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 100, -1));
+        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     public javax.swing.JButton jbtn_actualizar;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
@@ -153,7 +254,6 @@ public class ViewProducto extends javax.swing.JPanel {
     public javax.swing.JLabel jl_clave_proveedor;
     public javax.swing.JLabel jl_contenido;
     public javax.swing.JLabel jl_existencias;
-    public javax.swing.JLabel jl_fondo;
     public javax.swing.JLabel jl_paquete24;
     public javax.swing.JLabel jl_precio_pz;
     public javax.swing.JLabel jl_producto;

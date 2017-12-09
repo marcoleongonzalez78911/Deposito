@@ -28,52 +28,64 @@ public class ViewProveedores extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jl_clave = new javax.swing.JLabel();
+        jl_nombre = new javax.swing.JLabel();
+        jl_apellido = new javax.swing.JLabel();
+        jl_telefono = new javax.swing.JLabel();
+        jl_compañia = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        jt_proveedor = new javax.swing.JTable();
+        jl_buscar = new javax.swing.JLabel();
+        jtf_buscar = new javax.swing.JTextField();
+        jtf_clave_proveedor = new javax.swing.JTextField();
+        jtf_nombre = new javax.swing.JTextField();
+        jtf_apellido = new javax.swing.JTextField();
+        jtf_telefono = new javax.swing.JTextField();
+        jtf_compania = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jbtn_anterior = new javax.swing.JButton();
+        jbtn_siguiente = new javax.swing.JButton();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
+        jbtn_nuevo = new javax.swing.JButton();
+        jbtn_eliminar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jbtn_buscar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
         jLabel1.setText("          Proveedores ");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 11, 135, 25));
 
-        jLabel2.setText("Clave de Proveedor ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 51, -1, -1));
+        jl_clave.setText("Clave de Proveedor ");
+        add(jl_clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
-        jLabel3.setText("Nombre");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 92, -1, -1));
+        jl_nombre.setText("Nombre");
+        add(jl_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, -1));
 
-        jLabel4.setText("Apellido");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 136, -1, -1));
+        jl_apellido.setText("Apellido");
+        add(jl_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
 
-        jLabel5.setText("Telefono ");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 174, -1, -1));
+        jl_telefono.setText("Telefono ");
+        add(jl_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
-        jLabel6.setText("Compañia");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 212, -1, -1));
+        jl_compañia.setText("Compañia");
+        add(jl_compañia, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jt_proveedor.setBackground(new java.awt.Color(0, 102, 102));
+        jt_proveedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -84,72 +96,121 @@ public class ViewProveedores extends javax.swing.JPanel {
                 "Clave", "Nombre", "Telefono", "Compañia"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jt_proveedor);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 640, 99));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 580, 140));
 
-        jButton1.setText("<<<");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 108, -1, -1));
+        jl_buscar.setText("Buscar");
+        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
 
-        jButton2.setText(">>>");
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 108, -1, -1));
+        jtf_buscar.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_buscar.setBorder(null);
+        add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 150, -1));
 
-        jButton3.setText("Anterior");
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 171, -1, -1));
+        jtf_clave_proveedor.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_clave_proveedor.setBorder(null);
+        add(jtf_clave_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 150, -1));
 
-        jButton4.setText("Siguiente");
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 171, -1, -1));
+        jtf_nombre.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_nombre.setBorder(null);
+        add(jtf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 150, -1));
 
-        jButton5.setText("Nuevo");
-        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 212, -1, -1));
+        jtf_apellido.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_apellido.setBorder(null);
+        add(jtf_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 144, -1));
 
-        jButton6.setText("Actualizar");
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(546, 212, -1, -1));
+        jtf_telefono.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_telefono.setBorder(null);
+        add(jtf_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 144, -1));
 
-        jButton7.setText("Agregar");
-        add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 257, -1, -1));
+        jtf_compania.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_compania.setBorder(null);
+        add(jtf_compania, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 142, -1));
 
-        jButton8.setText("Eliminar");
-        add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 257, -1, -1));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLabel7.setText("Buscar");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 289, -1, -1));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 286, 127, -1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 48, 42, -1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 89, 144, -1));
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 133, 144, -1));
-        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 171, 144, -1));
-        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 209, 142, -1));
+        jbtn_anterior.setText("Anterior");
+        jPanel1.add(jbtn_anterior);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\coca-cola-w855h425.gif")); // NOI18N
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 680, 440));
+        jbtn_siguiente.setText("Siguiente");
+        jPanel1.add(jbtn_siguiente);
+
+        jbtn_agregar.setText("Agregar");
+        jPanel1.add(jbtn_agregar);
+
+        jbtn_actualizar.setBackground(new java.awt.Color(102, 102, 102));
+        jbtn_actualizar.setText("Actualizar");
+        jPanel1.add(jbtn_actualizar);
+
+        jbtn_nuevo.setText("Nuevo");
+        jPanel1.add(jbtn_nuevo);
+
+        jbtn_eliminar.setText("Eliminar");
+        jPanel1.add(jbtn_eliminar);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+        jPanel1.add(jLabel2);
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 220, 250, 280));
+
+        jbtn_buscar.setText("Buscar");
+        add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+        jPanel2.add(jLabel3);
+
+        jbtn_primero.setText("<<<");
+        jPanel2.add(jbtn_primero);
+
+        jbtn_ultimo.setText(">>>");
+        jPanel2.add(jbtn_ultimo);
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 250, 220));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 102, 150, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 102, 150, 10));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 150, -1));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 150, -1));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 232, 150, 10));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    public javax.swing.JButton jbtn_actualizar;
+    public javax.swing.JButton jbtn_agregar;
+    public javax.swing.JButton jbtn_anterior;
+    public javax.swing.JButton jbtn_buscar;
+    public javax.swing.JButton jbtn_eliminar;
+    public javax.swing.JButton jbtn_nuevo;
+    public javax.swing.JButton jbtn_primero;
+    public javax.swing.JButton jbtn_siguiente;
+    public javax.swing.JButton jbtn_ultimo;
+    public javax.swing.JLabel jl_apellido;
+    public javax.swing.JLabel jl_buscar;
+    public javax.swing.JLabel jl_clave;
+    public javax.swing.JLabel jl_compañia;
+    public javax.swing.JLabel jl_nombre;
+    public javax.swing.JLabel jl_telefono;
+    public javax.swing.JTable jt_proveedor;
+    public javax.swing.JTextField jtf_apellido;
+    public javax.swing.JTextField jtf_buscar;
+    public javax.swing.JTextField jtf_clave_proveedor;
+    public javax.swing.JTextField jtf_compania;
+    public javax.swing.JTextField jtf_nombre;
+    public javax.swing.JTextField jtf_telefono;
     // End of variables declaration//GEN-END:variables
 }

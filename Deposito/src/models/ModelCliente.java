@@ -21,11 +21,12 @@ import net.proteanit.sql.DbUtils;
  */
 public class ModelCliente {
     private Connection conexion;
-    private Statement st;
-    private ResultSet rs;
+    public Statement st;
+    public ResultSet rs;
     private PreparedStatement ps;
     private String sql;
     ViewCliente viewcli;
+    ModelCliente modelcli;
     
     private  String clave_cliente;
     private String nombre;
@@ -198,7 +199,7 @@ public class ModelCliente {
     }
     }//fin de actualizar
     
-       public void buscar(){
+     /* public void buscar(){
         try{
          
             rs = st.executeQuery("select * from clientes where nombre like '%"+this.viewcli.jtf_buscar.getText()+"%'");
@@ -211,6 +212,7 @@ public class ModelCliente {
              JOptionPane.showMessageDialog(null,"Error "+err.getMessage());
          }
     
-    }
+    }*/
+      
     
 }///Fin de la class

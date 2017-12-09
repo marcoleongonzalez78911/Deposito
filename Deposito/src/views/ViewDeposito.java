@@ -27,10 +27,10 @@ public class ViewDeposito extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jmb_menu = new javax.swing.JMenuBar();
         jmregistro = new javax.swing.JMenu();
         jmi_login = new javax.swing.JMenuItem();
@@ -44,47 +44,59 @@ public class ViewDeposito extends javax.swing.JFrame {
         jmi_Compras = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 102, 102));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\pepsi.jpg")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 240, 190));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\coca.png")); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 480, 180));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+        jPanel1.add(jLabel1);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\7-Up-Logo.svg.png")); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 300, 250));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+        jPanel1.add(jLabel2);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\fantalogo.jpg")); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, 250));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 450));
 
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 470, 490));
+
+        jmregistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-menú-principal-50.png"))); // NOI18N
         jmregistro.setText("Registros ");
 
+        jmi_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-identificación-no-verificada-50.png"))); // NOI18N
         jmi_login.setText("Login");
         jmregistro.add(jmi_login);
 
+        jmi_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-carpeta-de-usuario-50.png"))); // NOI18N
         jmi_cliente.setText("Clientes");
         jmregistro.add(jmi_cliente);
 
+        jmi_producto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-caja-llena-50.png"))); // NOI18N
         jmi_producto.setText("Producto");
         jmregistro.add(jmi_producto);
 
+        jmi_proveedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-proveedor-50.png"))); // NOI18N
         jmi_proveedor.setText("Proveedor");
         jmregistro.add(jmi_proveedor);
 
+        jmi_usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-usuario-de-género-neutro-50 (1).png"))); // NOI18N
         jmi_usuarios.setText("Usuarios");
         jmregistro.add(jmi_usuarios);
 
+        jmi_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-salir-redondeado-50.png"))); // NOI18N
         jmi_salir.setText("Salir");
         jmregistro.add(jmi_salir);
 
         jmb_menu.add(jmregistro);
 
+        jmventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-terminal-punto-de-venta-50.png"))); // NOI18N
         jmventa.setText("Venta y compra");
 
+        jmi_venta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-venta-50.png"))); // NOI18N
         jmi_venta.setText("Ventas");
         jmventa.add(jmi_venta);
 
+        jmi_Compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-orden-de-compra-50.png"))); // NOI18N
         jmi_Compras.setText("Compras");
         jmventa.add(jmi_Compras);
 
@@ -133,8 +145,8 @@ public class ViewDeposito extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     public javax.swing.JMenuBar jmb_menu;
     public javax.swing.JMenuItem jmi_Compras;
     public javax.swing.JMenuItem jmi_cliente;

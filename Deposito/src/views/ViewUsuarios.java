@@ -52,6 +52,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
         jbtn_agregar = new javax.swing.JButton();
         jl_fondo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jbtn_buscar = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -66,11 +67,11 @@ public class ViewUsuarios extends javax.swing.JPanel {
         add(jl_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jl_password.setText("Contraseña");
-        add(jl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-        add(jtf_id_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 50, -1));
+        add(jl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+        add(jtf_id_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 40, -1));
 
         jl_cargo.setText("Cargo");
-        add(jl_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        add(jl_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jl_fecha.setText("Facha");
         add(jl_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
@@ -88,7 +89,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jt_usuario);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 530, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 580, 100));
         add(jtf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 110, -1));
 
         jtf_password.addActionListener(new java.awt.event.ActionListener() {
@@ -96,16 +97,16 @@ public class ViewUsuarios extends javax.swing.JPanel {
                 jtf_passwordActionPerformed(evt);
             }
         });
-        add(jtf_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 110, -1));
+        add(jtf_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 110, -1));
 
         jbtn_primero.setText("<<<");
         add(jbtn_primero, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 70, -1));
         add(jtf_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 110, -1));
 
         jl_buscar.setText("Buscar");
-        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
-        add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 150, -1));
-        add(jtf_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 110, -1));
+        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+        add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 110, -1));
+        add(jtf_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 110, -1));
 
         jbtn_ultimo.setText(">>>");
         add(jbtn_ultimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 80, -1));
@@ -129,8 +130,11 @@ public class ViewUsuarios extends javax.swing.JPanel {
         add(jbtn_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 80, -1));
 
         jl_fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\images (psco).jpg")); // NOI18N
-        add(jl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 250, 230));
+        add(jl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 250, 230));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 740, 10));
+
+        jbtn_buscar.setText("Buscar");
+        add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_passwordActionPerformed
@@ -145,6 +149,7 @@ public class ViewUsuarios extends javax.swing.JPanel {
     public javax.swing.JButton jbtn_actualizar;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
+    public javax.swing.JButton jbtn_buscar;
     public javax.swing.JButton jbtn_eliminar;
     public javax.swing.JButton jbtn_nuevo;
     public javax.swing.JButton jbtn_primero;

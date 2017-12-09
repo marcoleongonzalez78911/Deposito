@@ -21,19 +21,22 @@ public class ControllerDeposito {
     ViewProducto viewprodu;
     ViewDeposito viewdepo;
     ViewLogin viewlong;
+    ViewVentas viewvent;
     ControllerCliente controllercli;
     ControllerProducto controllerprodu;
     ControllerProveedores controllerprove;
     ControllerUsuarios controlleruser;
+    ControllerVentas controllervent;
     
      public ControllerDeposito(ModelDeposito modeldepo,Object views[]){
     this.modeldepo = modeldepo;
-    this.viewdepo = (ViewDeposito) views[5];
+    this.viewdepo = (ViewDeposito) views[6];
     this.viewcli = (ViewCliente) views[0];
     this.viewuser =(ViewUsuarios) views[1];
     this.viewprodu = (ViewProducto) views[2];
     this.viewprove = (ViewProveedores) views[3];
     this.viewlong = (ViewLogin) views[4];
+    this.viewvent = (ViewVentas) views[5];
     
     
      viewdepo.jmi_cliente.addActionListener(e -> jmi_clienteActionPerformed());
@@ -42,6 +45,7 @@ public class ControllerDeposito {
      viewdepo.jmi_proveedor.addActionListener(e -> jmi_proveedorActionPerformed());
      viewdepo.jmi_login.addActionListener(e -> jmi_loginActionPerformed());
      viewdepo.jmi_salir.addActionListener(e -> salir_click());
+     viewdepo.jmi_venta.addActionListener(e-> jmi_ventaActionPerformed());
      initView();
      }
      
@@ -56,7 +60,14 @@ public class ControllerDeposito {
             jmi_productoActionPerformed();
         if(e.getSource()==viewdepo.jmi_login)
             jmi_loginActionPerformed();
+        if(e.getSource()==viewdepo.jmi_venta)
+            jmi_ventaActionPerformed();
       }
+      public void jmi_ventaActionPerformed(){
+        this.viewdepo.setContentPane(viewvent);
+        this.viewdepo.revalidate();
+        this.viewdepo.repaint();
+       }
       public void jmi_loginActionPerformed(){
         this.viewdepo.setContentPane(viewlong);
         this.viewdepo.revalidate();

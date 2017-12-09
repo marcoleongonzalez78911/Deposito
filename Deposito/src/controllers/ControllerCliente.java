@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package controllers;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import models.ModelCliente;
+import net.proteanit.sql.DbUtils;
 import views.ViewCliente;
 
 /**
@@ -27,7 +30,7 @@ public ControllerCliente(ModelCliente modelcli, ViewCliente viewcli){
     this.viewcli.jbtn_nuevo.addActionListener(e -> jbtn_nuevo_click());
     this.viewcli.jbtn_agregar.addActionListener(e -> jbtn_agregar_click());
     this.viewcli.jbtn_eliminar.addActionListener(e -> jbtn_borrar_click());
-    this.viewcli.jtf_buscar.addActionListener(e -> jtf_buscar_KeyReleased());
+    this.viewcli.jbtn_buscar.addActionListener(e -> jbtn_buscar_clic());
 
  initView();
 }
@@ -59,6 +62,7 @@ viewcli.jtf_telefono.setText("");
 public void jbtn_agregar_click(){
 setValores();
 modelcli.Insertar();
+tabla();
 getValores();
 
 }//boton agragar
@@ -82,6 +86,7 @@ getValores();
 public void jbtn_borrar_click(){
 setValores();
 modelcli.borrar();
+tabla();
 getValores();
 
 }//boton modificar
@@ -99,18 +104,33 @@ modelcli.moverAnterior();
 getValores();
 
 }//boton anterior
+ public void tabla(){
+        
+viewcli.jt_cliente.setModel(DbUtils.resultSetToTableModel(modelcli.rs));
+}//tabla
 
 public void initView(){
 modelcli.Conectar();
+tabla();
 viewcli.setVisible(true);
 modelcli.moverPrimero();
 getValores();
 }
 
-public void jtf_buscar_KeyReleased(){
-setValores();
-modelcli.buscar();
-getValores();
+private void jbtn_buscar_clic(){
+
+   try{
+         
+           modelcli.rs = modelcli.st.executeQuery("select * from clientes where nombre like '%"+viewcli.jtf_buscar.getText()+"%'");
+           tabla();
+            
+            
+        
+        } catch (SQLException err){
+             
+             JOptionPane.showMessageDialog(null,"Error "+err.getMessage());
+         }
+
 }
     
 }//fin de la class
