@@ -22,7 +22,7 @@ public ControllerUsuarios(ModelUsuarios modeluser, ViewUsuarios viewuser){
     this.modeluser = modeluser;
     this.viewuser = viewuser;
 
-     this.viewuser.jbtn_primero.addActionListener(e -> jbtn_primero_click());
+    this.viewuser.jbtn_primero.addActionListener(e -> jbtn_primero_click());
     this.viewuser.jbtn_siguiente.addActionListener(e -> jbtn_siguiente_click());
     this.viewuser.jbtn_anterior.addActionListener(e -> jbtn_anterior_click());
     this.viewuser.jbtn_ultimo.addActionListener(e -> jbtn_ultimo_click());

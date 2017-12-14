@@ -43,18 +43,18 @@ public class ViewProveedores extends javax.swing.JPanel {
         jtf_telefono = new javax.swing.JTextField();
         jtf_compania = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_eliminar = new javax.swing.JButton();
+        jbtn_nuevo = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
         jbtn_anterior = new javax.swing.JButton();
         jbtn_siguiente = new javax.swing.JButton();
-        jbtn_agregar = new javax.swing.JButton();
-        jbtn_actualizar = new javax.swing.JButton();
-        jbtn_nuevo = new javax.swing.JButton();
-        jbtn_eliminar = new javax.swing.JButton();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jbtn_buscar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jbtn_primero = new javax.swing.JButton();
-        jbtn_ultimo = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -101,7 +101,7 @@ public class ViewProveedores extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 580, 140));
 
         jl_buscar.setText("Buscar");
-        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
+        add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
         jtf_buscar.setBackground(new java.awt.Color(0, 102, 102));
         jtf_buscar.setBorder(null);
@@ -129,29 +129,42 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jbtn_anterior.setText("Anterior");
-        jPanel1.add(jbtn_anterior);
-
-        jbtn_siguiente.setText("Siguiente");
-        jPanel1.add(jbtn_siguiente);
-
+        jbtn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-de-acuerdo-48.png"))); // NOI18N
         jbtn_agregar.setText("Agregar");
         jPanel1.add(jbtn_agregar);
 
-        jbtn_actualizar.setBackground(new java.awt.Color(102, 102, 102));
-        jbtn_actualizar.setText("Actualizar");
-        jPanel1.add(jbtn_actualizar);
+        jbtn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-cancelar-48.png"))); // NOI18N
+        jbtn_eliminar.setText("Eliminar");
+        jPanel1.add(jbtn_eliminar);
 
+        jbtn_nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-agregar-archivo-48.png"))); // NOI18N
         jbtn_nuevo.setText("Nuevo");
         jPanel1.add(jbtn_nuevo);
 
-        jbtn_eliminar.setText("Eliminar");
-        jPanel1.add(jbtn_eliminar);
+        jbtn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-actualizar-48.png"))); // NOI18N
+        jbtn_actualizar.setText("Actualizar");
+        jPanel1.add(jbtn_actualizar);
+
+        jbtn_anterior.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-anterior-48.png"))); // NOI18N
+        jbtn_anterior.setText("Anterior");
+        jPanel1.add(jbtn_anterior);
+
+        jbtn_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-siguiente-48.png"))); // NOI18N
+        jbtn_siguiente.setText("Siguiente");
+        jPanel1.add(jbtn_siguiente);
+
+        jbtn_primero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-izquierda-en-cuadrado-48 (1).png"))); // NOI18N
+        jbtn_primero.setText("Primero");
+        jPanel1.add(jbtn_primero);
+
+        jbtn_ultimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-derecha-en-cuadrado-48.png"))); // NOI18N
+        jbtn_ultimo.setText("Ultimo");
+        jPanel1.add(jbtn_ultimo);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 220, 250, 280));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 280, 410));
 
         jbtn_buscar.setText("Buscar");
         add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
@@ -161,13 +174,7 @@ public class ViewProveedores extends javax.swing.JPanel {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
         jPanel2.add(jLabel3);
 
-        jbtn_primero.setText("<<<");
-        jPanel2.add(jbtn_primero);
-
-        jbtn_ultimo.setText(">>>");
-        jPanel2.add(jbtn_ultimo);
-
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 250, 220));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 280, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 102, 150, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 102, 150, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 150, -1));

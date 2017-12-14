@@ -38,22 +38,31 @@ public class ViewUsuarios extends javax.swing.JPanel {
         jt_usuario = new javax.swing.JTable();
         jtf_nombre = new javax.swing.JTextField();
         jtf_password = new javax.swing.JTextField();
-        jbtn_primero = new javax.swing.JButton();
         jtf_fecha = new javax.swing.JTextField();
         jl_buscar = new javax.swing.JLabel();
         jtf_buscar = new javax.swing.JTextField();
         jtf_tipo_usuario = new javax.swing.JTextField();
-        jbtn_ultimo = new javax.swing.JButton();
-        jbtn_anterior = new javax.swing.JButton();
-        jbtn_siguiente = new javax.swing.JButton();
-        jbtn_nuevo = new javax.swing.JButton();
-        jbtn_actualizar = new javax.swing.JButton();
-        jbtn_eliminar = new javax.swing.JButton();
-        jbtn_agregar = new javax.swing.JButton();
-        jl_fondo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jbtn_buscar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_eliminar = new javax.swing.JButton();
+        jbtn_nuevo = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
+        jbtn_siguiente = new javax.swing.JButton();
+        jbtn_anterior = new javax.swing.JButton();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_titulo.setFont(new java.awt.Font("Kristen ITC", 2, 14)); // NOI18N
@@ -64,18 +73,22 @@ public class ViewUsuarios extends javax.swing.JPanel {
         add(id_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jl_nombre.setText("Nombre");
-        add(jl_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        add(jl_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jl_password.setText("Contraseña");
-        add(jl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
-        add(jtf_id_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 40, -1));
+        add(jl_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
+
+        jtf_id_usuario.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_id_usuario.setBorder(null);
+        add(jtf_id_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 60, -1));
 
         jl_cargo.setText("Cargo");
-        add(jl_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+        add(jl_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jl_fecha.setText("Facha");
-        add(jl_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        add(jl_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
+        jt_usuario.setBackground(new java.awt.Color(0, 102, 102));
         jt_usuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -89,52 +102,132 @@ public class ViewUsuarios extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jt_usuario);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 580, 100));
-        add(jtf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 110, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 550, 150));
 
+        jtf_nombre.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_nombre.setBorder(null);
+        add(jtf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 110, -1));
+
+        jtf_password.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_password.setBorder(null);
         jtf_password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_passwordActionPerformed(evt);
             }
         });
-        add(jtf_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 110, -1));
+        add(jtf_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 110, -1));
 
-        jbtn_primero.setText("<<<");
-        add(jbtn_primero, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 70, -1));
-        add(jtf_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 110, -1));
+        jtf_fecha.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_fecha.setBorder(null);
+        add(jtf_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 110, -1));
 
         jl_buscar.setText("Buscar");
         add(jl_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+
+        jtf_buscar.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_buscar.setBorder(null);
         add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 110, -1));
-        add(jtf_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 110, -1));
 
-        jbtn_ultimo.setText(">>>");
-        add(jbtn_ultimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 80, -1));
-
-        jbtn_anterior.setText("Anterior");
-        add(jbtn_anterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, -1, -1));
-
-        jbtn_siguiente.setText("Siguiente");
-        add(jbtn_siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
-
-        jbtn_nuevo.setText("Nuevo");
-        add(jbtn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 70, -1));
-
-        jbtn_actualizar.setText("Actualizar");
-        add(jbtn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
-
-        jbtn_eliminar.setText("Eliminar");
-        add(jbtn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, -1, -1));
-
-        jbtn_agregar.setText("Agregar");
-        add(jbtn_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 80, -1));
-
-        jl_fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\mark\\Pictures\\deposito\\images (psco).jpg")); // NOI18N
-        add(jl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 250, 230));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 740, 10));
+        jtf_tipo_usuario.setBackground(new java.awt.Color(0, 102, 102));
+        jtf_tipo_usuario.setBorder(null);
+        add(jtf_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 110, -1));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 540, 10));
 
         jbtn_buscar.setText("Buscar");
         add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+
+        jbtn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-de-acuerdo-48.png"))); // NOI18N
+        jbtn_agregar.setText("Agregar");
+
+        jbtn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-cancelar-48.png"))); // NOI18N
+        jbtn_eliminar.setText("Eliminar");
+
+        jbtn_nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-agregar-archivo-48.png"))); // NOI18N
+        jbtn_nuevo.setText("Nuevo");
+
+        jbtn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-actualizar-48.png"))); // NOI18N
+        jbtn_actualizar.setText("Actualizar");
+
+        jbtn_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-siguiente-48.png"))); // NOI18N
+        jbtn_siguiente.setText("Siguiente");
+
+        jbtn_anterior.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-anterior-48.png"))); // NOI18N
+        jbtn_anterior.setText("Anterior");
+
+        jbtn_primero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-izquierda-en-cuadrado-48 (1).png"))); // NOI18N
+        jbtn_primero.setText("Primero");
+
+        jbtn_ultimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-derecha-en-cuadrado-48.png"))); // NOI18N
+        jbtn_ultimo.setText("Ultimo");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_agregar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbtn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbtn_anterior))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_siguiente)
+                                    .addComponent(jbtn_actualizar)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_primero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbtn_ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_agregar)
+                    .addComponent(jbtn_eliminar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_nuevo)
+                    .addComponent(jbtn_actualizar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_siguiente)
+                    .addComponent(jbtn_anterior))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_primero)
+                    .addComponent(jbtn_ultimo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7))
+        );
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, -1, -1));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 60, 10));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 110, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 120, 10));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 110, 20));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 110, 10));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 120, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_passwordActionPerformed
@@ -144,8 +237,17 @@ public class ViewUsuarios extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel id_usuario;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     public javax.swing.JButton jbtn_actualizar;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
@@ -158,7 +260,6 @@ public class ViewUsuarios extends javax.swing.JPanel {
     public javax.swing.JLabel jl_buscar;
     public javax.swing.JLabel jl_cargo;
     public javax.swing.JLabel jl_fecha;
-    public javax.swing.JLabel jl_fondo;
     public javax.swing.JLabel jl_nombre;
     public javax.swing.JLabel jl_password;
     public javax.swing.JLabel jl_titulo;

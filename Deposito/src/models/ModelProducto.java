@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class ModelProducto {
     private Connection conexion;
-    private Statement st;
+    public Statement st;
     public ResultSet rs;
     private PreparedStatement ps;
     private String sql;
@@ -162,7 +162,7 @@ public class ModelProducto {
          sql = "select * from productos;";
          ps = conexion.prepareStatement(sql);
          rs = ps.executeQuery();
-         moverPrimero();
+         
     } catch(SQLException ex){
         JOptionPane.showMessageDialog(null,"Error 107");
     }
@@ -223,7 +223,7 @@ public class ModelProducto {
         JOptionPane.showMessageDialog(null,"Error 110");
     }
     }//fin de actualizar
-    public void buscar(){
+ /*   public void buscar(){
     try{
      rs = st.executeQuery("select * from clientes where nombre like '%");
      ps = conexion.prepareStatement(sql);
@@ -241,5 +241,5 @@ public class ModelProducto {
         JOptionPane.showMessageDialog(null,"Error 100");
     }
     
-    } 
+    } */
 }/*fin de la clase ModelProducto*/

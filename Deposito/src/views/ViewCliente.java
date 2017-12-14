@@ -43,24 +43,23 @@ public class ViewCliente extends javax.swing.JPanel {
         jl_buscar = new javax.swing.JLabel();
         jtf_buscar = new javax.swing.JTextField();
         jbtn_buscar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jbtn_siguiente = new javax.swing.JButton();
-        jbtn_anterior = new javax.swing.JButton();
-        jbtn_nuevo = new javax.swing.JButton();
-        jbtn_agregar = new javax.swing.JButton();
-        jbtn_eliminar = new javax.swing.JButton();
-        jbtn_actualizar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jPanel2 = new javax.swing.JPanel();
-        jl_imagen2 = new javax.swing.JLabel();
-        jbtn_primero = new javax.swing.JButton();
-        jbtn_ultimo = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_eliminar = new javax.swing.JButton();
+        jbtn_nuevo = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
+        jbtn_siguiente = new javax.swing.JButton();
+        jbtn_anterior = new javax.swing.JButton();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +93,7 @@ public class ViewCliente extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jt_cliente);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 600, 200));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 600, 200));
 
         jl_titulo.setFont(new java.awt.Font("Microsoft JhengHei", 2, 18)); // NOI18N
         jl_titulo.setText("          Clientes");
@@ -130,51 +129,99 @@ public class ViewCliente extends javax.swing.JPanel {
         jbtn_buscar.setText("Buscar");
         jbtn_buscar.setBorder(new javax.swing.border.MatteBorder(null));
         add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 60, 20));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, -1, -1));
-
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-
-        jbtn_siguiente.setText("Siguiente");
-        jPanel1.add(jbtn_siguiente);
-
-        jbtn_anterior.setText("Anterior");
-        jPanel1.add(jbtn_anterior);
-
-        jbtn_nuevo.setText("Nuevo");
-        jPanel1.add(jbtn_nuevo);
-
-        jbtn_agregar.setText("Agregar");
-        jPanel1.add(jbtn_agregar);
-
-        jbtn_eliminar.setText("Eliminar");
-        jPanel1.add(jbtn_eliminar);
-
-        jbtn_actualizar.setText("Actualizar");
-        jPanel1.add(jbtn_actualizar);
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 260, 290));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 112, 140, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 112, 140, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 140, 10));
-
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-
-        jl_imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
-        jPanel2.add(jl_imagen2);
-
-        jbtn_primero.setBackground(new java.awt.Color(153, 153, 153));
-        jbtn_primero.setText("<<<");
-        jPanel2.add(jbtn_primero);
-
-        jbtn_ultimo.setText(">>>");
-        jPanel2.add(jbtn_ultimo);
-
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 260, 220));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 182, 150, 10));
         add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 140, 10));
         add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 140, 10));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+
+        jbtn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-de-acuerdo-48.png"))); // NOI18N
+        jbtn_agregar.setText("Agregar");
+
+        jbtn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-cancelar-48.png"))); // NOI18N
+        jbtn_eliminar.setText("Eliminar");
+
+        jbtn_nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-agregar-archivo-48.png"))); // NOI18N
+        jbtn_nuevo.setText("Nuevo");
+
+        jbtn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-actualizar-48.png"))); // NOI18N
+        jbtn_actualizar.setText("Actualizar");
+
+        jbtn_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-siguiente-48.png"))); // NOI18N
+        jbtn_siguiente.setText("Siguiente");
+
+        jbtn_anterior.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-anterior-48.png"))); // NOI18N
+        jbtn_anterior.setText("Anterior");
+
+        jbtn_primero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-izquierda-en-cuadrado-48 (1).png"))); // NOI18N
+        jbtn_primero.setText("Primero");
+
+        jbtn_ultimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-derecha-en-cuadrado-48.png"))); // NOI18N
+        jbtn_ultimo.setText("Ultimo");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_agregar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbtn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbtn_anterior))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_siguiente)
+                                    .addComponent(jbtn_actualizar)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_primero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbtn_ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_agregar)
+                    .addComponent(jbtn_eliminar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_nuevo)
+                    .addComponent(jbtn_actualizar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_siguiente)
+                    .addComponent(jbtn_anterior))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_primero)
+                    .addComponent(jbtn_ultimo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2))
+        );
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 310, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtbn_ultimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbn_ultimoActionPerformed
@@ -183,8 +230,8 @@ public class ViewCliente extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
@@ -206,7 +253,6 @@ public class ViewCliente extends javax.swing.JPanel {
     public javax.swing.JLabel jl_apellido_p;
     public javax.swing.JLabel jl_buscar;
     public javax.swing.JLabel jl_clave;
-    private javax.swing.JLabel jl_imagen2;
     public javax.swing.JLabel jl_nombre;
     public javax.swing.JLabel jl_telefono;
     public javax.swing.JLabel jl_titulo;

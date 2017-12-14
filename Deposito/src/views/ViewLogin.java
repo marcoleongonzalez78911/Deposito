@@ -42,10 +42,12 @@ public class ViewLogin extends javax.swing.JPanel {
         jPasswordField1 = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(0, 102, 102));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jl_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-usuario-de-género-neutro-100.png"))); // NOI18N
 
         jl_usuario.setText("USUARIO");
+        jl_usuario.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jl_contraseña.setText("CONTRASEÑA");
 
@@ -87,6 +89,7 @@ public class ViewLogin extends javax.swing.JPanel {
         );
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-usuario-de-género-neutro-50.png"))); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-llave-50.png"))); // NOI18N
 
@@ -121,20 +124,19 @@ public class ViewLogin extends javax.swing.JPanel {
                         .addGap(79, 79, 79))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jbtn_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(175, 175, 175))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jl_fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(160, 160, 160))))))
+                        .addComponent(jbtn_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(175, 175, 175))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(jl_fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(31, 31, 31)
                 .addComponent(jl_fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(28, 28, 28)
                 .addComponent(jl_usuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jtf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

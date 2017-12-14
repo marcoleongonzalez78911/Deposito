@@ -120,7 +120,7 @@ private void jbtn_buscar_clic(){
 
    try{
          
-           modelprove.rs = modelprove.st.executeQuery("select * from clientes where nombre like '%"+viewprove.jtf_buscar.getText()+"%'");
+           modelprove.rs = modelprove.st.executeQuery("select * from proveedores where nombre like '%"+viewprove.jtf_buscar.getText()+"%'");
            tabla();
             
             

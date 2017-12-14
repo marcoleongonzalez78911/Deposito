@@ -11,11 +11,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author mark
  */
-public class ModelVentas {
+public class ModelCompra {
     private Connection conexion;
     public Statement st;
     public ResultSet rs;
@@ -23,84 +25,43 @@ public class ModelVentas {
     private String sql;
     
     
-    private  String clave_venta;
-    private String fecha_venta;
-    private String clave_cliente;
-    private String total_venta;
-    
-   /* private String clave_productos;
-    private String Total_productos;
-    private String Precio_pz;
-     String Precio_paquete24;*/
+     
+    private  String clave_compra;
+    private String fecha_compra;
+    private String clave_proveedor;
+    private String total_compra;
 
-    public String getClave_venta() {
-        return clave_venta;
+    public String getClave_compra() {
+        return clave_compra;
     }
 
-    public void setClave_venta(String clave_venta) {
-        this.clave_venta = clave_venta;
+    public void setClave_compra(String clave_compra) {
+        this.clave_compra = clave_compra;
     }
 
-    public String getFecha_venta() {
-        return fecha_venta;
+    public String getFecha_compra() {
+        return fecha_compra;
     }
 
-    public void setFecha_venta(String fecha_venta) {
-        this.fecha_venta = fecha_venta;
+    public void setFecha_compra(String fecha_compra) {
+        this.fecha_compra = fecha_compra;
     }
 
-    public String getClave_cliente() {
-        return clave_cliente;
+    public String getClave_proveedor() {
+        return clave_proveedor;
     }
 
-    public void setClave_cliente(String clave_cliente) {
-        this.clave_cliente = clave_cliente;
+    public void setClave_proveedor(String clave_proveedor) {
+        this.clave_proveedor = clave_proveedor;
     }
 
-    public String getTotal_venta() {
-        return total_venta;
+    public String getTotal_compra() {
+        return total_compra;
     }
 
-    public void setTotal_venta(String total_venta) {
-        this.total_venta = total_venta;
+    public void setTotal_compra(String total_compra) {
+        this.total_compra = total_compra;
     }
-
-    /* public String getClave_productos() {
-        return clave_productos;
-    }
-
-    public void setClave_productos(String clave_productos) {
-        this.clave_productos = clave_productos;
-    }
-
-    public String getTotal_productos() {
-        return Total_productos;
-    }
-
-    public void setTotal_productos(String Total_productos) {
-        this.Total_productos = Total_productos;
-    }
-
-    public String getPrecio_pz() {
-        return Precio_pz;
-    }
-
-    public void setPrecio_pz(String Precio_pz) {
-        this.Precio_pz = Precio_pz;
-    }
-
-    public String getPrecio_paquete24() {
-        return Precio_paquete24;
-    }
-
-    public void setPrecio_paquete24(String Precio_paquete24) {
-        this.Precio_paquete24 = Precio_paquete24;
-    }
-    
-   public void Multiplicacion(){
-    this.total_venta = this.Precio_paquete24 * this.Total_productos;
-    }*/
-    
     
      public void Conectar(){
     try{
@@ -113,13 +74,13 @@ public class ModelVentas {
         JOptionPane.showMessageDialog(null,"Error 101");
     }
     }//conectar
-    
+     
       public void llenarValores(){
     try{
-        setClave_venta(rs.getString("clave_venta"));
-        setFecha_venta(rs.getString("fecha_venta"));
-        setClave_cliente(rs.getString("clave_cliente"));
-        setTotal_venta(rs.getString("total_venta"));
+        setClave_compra(rs.getString("clave_compra"));
+        setFecha_compra(rs.getString("fecha_compra"));
+        setClave_proveedor(rs.getString("clave_proveedor"));
+        setTotal_compra(rs.getString("total_compra"));
         
         
     } catch(SQLException ex){
@@ -172,7 +133,7 @@ public class ModelVentas {
      
       public void SeleccionarTodo(){
      try{
-         sql = "select * from venta;";
+         sql = "select * from compra;";
          ps = conexion.prepareStatement(sql);
          rs = ps.executeQuery();
          
@@ -184,12 +145,12 @@ public class ModelVentas {
     
        public void Insertar(){
      try{
-        sql = "insert into venta(clave_venta, fecha_venta, clave_cliente,total_venta)values(?,?,?,?);";
+        sql = "insert into venta(clave_compra, fecha_compra, clave_proveedor,total_compra)values(?,?,?,?);";
         ps = conexion.prepareStatement(sql);
-        ps.setString(1,getClave_venta());
-        ps.setString(2,getFecha_venta());
-        ps.setString(3,getClave_cliente());
-        ps.setString(4,getTotal_venta());
+        ps.setString(1,getClave_compra());
+        ps.setString(2,getFecha_compra());
+        ps.setString(3,getClave_compra());
+        ps.setString(4,getTotal_compra());
         ps.executeUpdate();
          Conectar();
          moverPrimero();
@@ -202,9 +163,9 @@ public class ModelVentas {
    
      public void borrar(){
      try{
-        sql = "Delete from venta where clave_venta = ?;";
+        sql = "Delete from compra where clave_compra = ?;";
         ps = conexion.prepareStatement(sql);
-        ps.setString(1,getClave_venta());
+        ps.setString(1,getClave_compra());
         ps.executeUpdate();
         Conectar();
         moverPrimero();
@@ -215,12 +176,12 @@ public class ModelVentas {
      
      public void actualizar(){
      try{
-        sql = "UPDATE venta SET clave_venta = ?, fecha_venta = ?, clave_cliente = ?, total_venta = ?;";
+        sql = "UPDATE compra SET clave_compra = ?, fecha_compra = ?, clave_proveedor = ?, total_compra = ?;";
         ps = conexion.prepareStatement(sql);
-        ps.setString(1, getClave_venta());
-        ps.setString(2,getFecha_venta());
-        ps.setString(3,getClave_cliente());
-        ps.setString(4,getTotal_venta());
+        ps.setString(1, getClave_compra());
+        ps.setString(2,getFecha_compra());
+        ps.setString(3,getClave_proveedor());
+        ps.setString(4,getTotal_compra());
         ps.executeUpdate();
         Conectar();
         moverPrimero();
@@ -230,4 +191,6 @@ public class ModelVentas {
         JOptionPane.showMessageDialog(null,"Error 110");
     }
     }//fin de actualizar
+    
+    
 }//fin de la clase

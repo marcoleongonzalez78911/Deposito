@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package controllers;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import views.ViewProducto;
 import models.ModelProducto;
 import net.proteanit.sql.DbUtils;
@@ -27,6 +29,7 @@ public ControllerProducto(ModelProducto modelprodu, ViewProducto viewprodu){
     this.viewprodu.jbtn_nuevo.addActionListener(e -> jbtn_nuevo_click());
     this.viewprodu.jbtn_agregar.addActionListener(e -> jbtn_agregar_click());
     this.viewprodu.jbtn_eliminar.addActionListener(e -> jbtn_borrar_click());
+    this.viewprodu.jbtn_buscar.addActionListener(e -> jbtn_buscar_clic());
 
  initView();
 }//fin del constructor
@@ -118,5 +121,21 @@ tabla();
 viewprodu.setVisible(true);
 modelprodu.moverPrimero();
 getValores();
+}
+
+private void jbtn_buscar_clic(){
+
+   try{
+         
+           modelprodu.rs = modelprodu.st.executeQuery("select * from productos where tipo_producto like '%"+viewprodu.jtf_buscar.getText()+"%'");
+           tabla();
+            
+            
+        
+        } catch (SQLException err){
+             
+             JOptionPane.showMessageDialog(null,"Error en buscar proveedores "+err.getMessage());
+         }
+
 }
 }//fin de la clase 

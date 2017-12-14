@@ -145,7 +145,7 @@ public class ModelUsuarios {
          sql = "select * from usuario;";
          ps = conexion.prepareStatement(sql);
          rs = ps.executeQuery();
-         moverPrimero();
+        
     } catch(SQLException ex){
         JOptionPane.showMessageDialog(null,"Error 107");
     }

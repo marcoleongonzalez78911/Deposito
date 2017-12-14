@@ -141,7 +141,7 @@ public class ModelCliente {
          sql = "select * from clientes;";
          ps = conexion.prepareStatement(sql);
          rs = ps.executeQuery();
-         moverPrimero();
+         
     } catch(SQLException ex){
         JOptionPane.showMessageDialog(null,"Error 107");
     }

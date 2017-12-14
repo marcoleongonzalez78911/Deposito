@@ -41,7 +41,10 @@ public class ViewDeposito extends javax.swing.JFrame {
         jmi_salir = new javax.swing.JMenuItem();
         jmventa = new javax.swing.JMenu();
         jmi_venta = new javax.swing.JMenuItem();
-        jmi_Compras = new javax.swing.JMenuItem();
+        jmi_compras = new javax.swing.JMenuItem();
+        jmenu_deta = new javax.swing.JMenu();
+        jmi_deta_venta = new javax.swing.JMenuItem();
+        jmi_deta_compra = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 102));
@@ -96,11 +99,24 @@ public class ViewDeposito extends javax.swing.JFrame {
         jmi_venta.setText("Ventas");
         jmventa.add(jmi_venta);
 
-        jmi_Compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-orden-de-compra-50.png"))); // NOI18N
-        jmi_Compras.setText("Compras");
-        jmventa.add(jmi_Compras);
+        jmi_compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-orden-de-compra-50.png"))); // NOI18N
+        jmi_compras.setText("Compras");
+        jmventa.add(jmi_compras);
 
         jmb_menu.add(jmventa);
+
+        jmenu_deta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-ver-detalles-48.png"))); // NOI18N
+        jmenu_deta.setText("Detalles Venta y Compra");
+
+        jmi_deta_venta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-orden-de-compra-50.png"))); // NOI18N
+        jmi_deta_venta.setText("Detalles Venta");
+        jmenu_deta.add(jmi_deta_venta);
+
+        jmi_deta_compra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-orden-de-compra-48.png"))); // NOI18N
+        jmi_deta_compra.setText("Detalles Compra");
+        jmenu_deta.add(jmi_deta_compra);
+
+        jmb_menu.add(jmenu_deta);
 
         setJMenuBar(jmb_menu);
 
@@ -148,8 +164,11 @@ public class ViewDeposito extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JMenuBar jmb_menu;
-    public javax.swing.JMenuItem jmi_Compras;
+    public javax.swing.JMenu jmenu_deta;
     public javax.swing.JMenuItem jmi_cliente;
+    public javax.swing.JMenuItem jmi_compras;
+    public javax.swing.JMenuItem jmi_deta_compra;
+    public javax.swing.JMenuItem jmi_deta_venta;
     public javax.swing.JMenuItem jmi_login;
     public javax.swing.JMenuItem jmi_producto;
     public javax.swing.JMenuItem jmi_proveedor;

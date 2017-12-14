@@ -46,19 +46,7 @@ public class ViewProducto extends javax.swing.JPanel {
         jtf_paquete24 = new javax.swing.JTextField();
         jl_buscar = new javax.swing.JLabel();
         jtf_buscar = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jbtn_anterior = new javax.swing.JButton();
-        jbtn_nuevo = new javax.swing.JButton();
-        jbtn_actualizar = new javax.swing.JButton();
-        jbtn_siguiente = new javax.swing.JButton();
-        jbtn_eliminar = new javax.swing.JButton();
-        jbtn_agregar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jbtn_primero = new javax.swing.JButton();
-        jbtn_ultimo = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbtn_buscar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -73,6 +61,17 @@ public class ViewProducto extends javax.swing.JPanel {
         jTextField2 = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jbtn_agregar = new javax.swing.JButton();
+        jbtn_eliminar = new javax.swing.JButton();
+        jbtn_nuevo = new javax.swing.JButton();
+        jbtn_actualizar = new javax.swing.JButton();
+        jbtn_siguiente = new javax.swing.JButton();
+        jbtn_anterior = new javax.swing.JButton();
+        jbtn_primero = new javax.swing.JButton();
+        jbtn_ultimo = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,13 +104,13 @@ public class ViewProducto extends javax.swing.JPanel {
         jt_productos.setBackground(new java.awt.Color(0, 102, 102));
         jt_productos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Clave", "Producto", "Contenido", "Existencias", "Proveedor", "Precio Pz", "Paquete24"
+                "Clave", "Producto", "Contenido", "Existencias", "Proveedor", "Precio comra pz", "Precio  pz", "Precio compra pq24", "Precio paq24"
             }
         ));
         jScrollPane1.setViewportView(jt_productos);
@@ -153,46 +152,8 @@ public class ViewProducto extends javax.swing.JPanel {
         jtf_buscar.setBorder(null);
         add(jtf_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 180, -1));
 
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-
-        jbtn_anterior.setText("Anterior");
-        jPanel2.add(jbtn_anterior);
-
-        jbtn_nuevo.setText("Nuevo");
-        jPanel2.add(jbtn_nuevo);
-
-        jbtn_actualizar.setText("Actualizar");
-        jPanel2.add(jbtn_actualizar);
-
-        jbtn_siguiente.setText("Siguiente");
-        jPanel2.add(jbtn_siguiente);
-
-        jbtn_eliminar.setText("Eliminar");
-        jPanel2.add(jbtn_eliminar);
-
-        jbtn_agregar.setText("Agregar");
-        jPanel2.add(jbtn_agregar);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
-        jPanel2.add(jLabel1);
-
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 260, 360));
-
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
-        jPanel1.add(jLabel2);
-
-        jbtn_primero.setText("<<<");
-        jPanel1.add(jbtn_primero);
-
-        jbtn_ultimo.setText(">>>");
-        jPanel1.add(jbtn_ultimo);
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 250, 250));
-
-        jButton1.setText("Buscar");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
+        jbtn_buscar.setText("Buscar");
+        add(jbtn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 112, 90, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 110, -1));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 130, -1));
@@ -217,16 +178,101 @@ public class ViewProducto extends javax.swing.JPanel {
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 150, -1));
         add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 100, -1));
         add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 150, -1));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/cocaclasic.jpg"))); // NOI18N
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/coca negro.jpg"))); // NOI18N
+
+        jbtn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-de-acuerdo-48.png"))); // NOI18N
+        jbtn_agregar.setText("Agregar");
+
+        jbtn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-cancelar-48.png"))); // NOI18N
+        jbtn_eliminar.setText("Eliminar");
+
+        jbtn_nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-agregar-archivo-48.png"))); // NOI18N
+        jbtn_nuevo.setText("Nuevo");
+
+        jbtn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-actualizar-48.png"))); // NOI18N
+        jbtn_actualizar.setText("Actualizar");
+
+        jbtn_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-siguiente-48.png"))); // NOI18N
+        jbtn_siguiente.setText("Siguiente");
+
+        jbtn_anterior.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-anterior-48.png"))); // NOI18N
+        jbtn_anterior.setText("Anterior");
+
+        jbtn_primero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-izquierda-en-cuadrado-48 (1).png"))); // NOI18N
+        jbtn_primero.setText("Primero");
+
+        jbtn_ultimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/imagenes/icons8-derecha-en-cuadrado-48.png"))); // NOI18N
+        jbtn_ultimo.setText("Ultimo");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_agregar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbtn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbtn_anterior))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbtn_siguiente)
+                                    .addComponent(jbtn_actualizar)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbtn_primero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbtn_ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_agregar)
+                    .addComponent(jbtn_eliminar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_nuevo)
+                    .addComponent(jbtn_actualizar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_siguiente)
+                    .addComponent(jbtn_anterior))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_primero)
+                    .addComponent(jbtn_ultimo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7))
+        );
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 330, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
@@ -244,6 +290,7 @@ public class ViewProducto extends javax.swing.JPanel {
     public javax.swing.JButton jbtn_actualizar;
     public javax.swing.JButton jbtn_agregar;
     public javax.swing.JButton jbtn_anterior;
+    public javax.swing.JButton jbtn_buscar;
     public javax.swing.JButton jbtn_eliminar;
     public javax.swing.JButton jbtn_nuevo;
     public javax.swing.JButton jbtn_primero;
